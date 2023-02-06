@@ -55,5 +55,21 @@ Mean Levenstein ratio on Task 3:   **0.9177**
 
 I also calculated [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) for text localization task but got avarage results - **0.8274**. When I went into details of index calculation I realized that all the ground truths bounding boxes were rectangles without any slope. But PaddleOCR produce rectangles with slope when image is rotated. Above is an example of rotated image `X51005268408.jpg` from test dataset
 
+![X51005268408.jpg](img/X51005268408_part.png)
+
+Red boxes are predictions and green boxes are the ground truths. IoU ratio is using only 2 vertices (upper left and lower right):
+
+```
+pred_box_df = pd.DataFrame(data=lines, columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4', 'text'])
+
+pred_box_df['x'] = pred_box_df['x1'].astype(int)
+pred_box_df['y'] = pred_box_df['y1'].astype(int)
+pred_box_df['w'] = pred_box_df['x2'].astype(int) - pred_box_df['x1'].astype(int)
+pred_box_df['h'] = pred_box_df['y3'].astype(int) - pred_box_df['y1'].astype(int)
+
+pred_box_df = pred_box_df.drop(columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4'])
+
+ap, mean_iou, mean_ratio = calculate_AP(gt_box_df, pred_box_df, iou_thr, lratio_thr)
+```
 
 
