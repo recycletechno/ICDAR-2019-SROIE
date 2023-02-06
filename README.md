@@ -72,4 +72,18 @@ pred_box_df = pred_box_df.drop(columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4'
 ap, mean_iou, mean_ratio = calculate_AP(gt_box_df, pred_box_df, iou_thr, lratio_thr)
 ```
 
+Tail from ground truth `X51005268408.txt` file:
 
+<pre>
+196,<b>1335</b>,600,<b>1335</b>,600,<b>1390</b>,196,<b>1390</b>,THANK YOU. PLEASE COME AGAIN
+<b>123</b>,1375,<b>683</b>,1375,<b>683</b>,1441,<b>123</b>,1441,KEEP THE INVOICE FOR APPLICABLE RETURNS
+</pre>
+
+One can observe that Xs and Ys repeat each other, which leads to zero slope of rectangle
+
+On the other hand PaddleOCR yields angled rectangles with different eight coordinates. And it gains with very good OCR results. That's why I did not rely on IoU ratio too much
+
+<pre>
+198,1358,597,1331,599,1365,200,1392,IHANK VOU. PLEASE CONE AOAIN
+122,1407,682,1365,685,1397,125,1440,KEEG THE INVOICE FAR SPALICEBLE RETURNS
+</pre>
