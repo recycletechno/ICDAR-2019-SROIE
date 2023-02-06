@@ -45,3 +45,15 @@ I used out of the box solution with [PaddleOCR](https://github.com/PaddlePaddle/
 
 The Donut model was proposed in [OCR-free Document Understanding Transformer](https://arxiv.org/abs/2111.15664). Donut consists of an image Transformer encoder and an autoregressive text Transformer decoder to perform document understanding tasks such as document image classification, form understanding and visual question answering. Overview, code examples as a huggingface transformer available [here](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
 
+A pretrained model [unstructuredio/donut-base-sroie](https://huggingface.co/unstructuredio/donut-base-sroie) was taken as a backbone
+
+## Results
+
+Mean Levenstein ratio on Task 1,2: **0.9337**
+
+Mean Levenstein ratio on Task 3:   **0.9177**
+
+I also calculated [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) for text localization task but got avarage results - **0.8274**. When I went into details of index calculation I realized that all the ground truths bounding boxes were rectangles without any slope. But PaddleOCR produce rectangles with slope when image is rotated. Above is an example of rotated image `X51005268408.jpg` from test dataset
+
+
+
