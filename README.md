@@ -156,4 +156,4 @@ I've included demo blocks on each task. You can provide url link for any receipt
 }
 ```
 
-Feel free to modify/improve this code available for Google Colab/Jupiter notebook [here](./ICDAR_2019_SROIE.ipynb)
+Feel free to modify/improve this code available for Google Colab/Jupiter notebook with GPU support [here](./ICDAR_2019_SROIE.ipynb)
