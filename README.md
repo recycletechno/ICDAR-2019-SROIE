@@ -87,3 +87,8 @@ On the other hand PaddleOCR yields angled rectangles with different eight coordi
 198,1358,597,1331,599,1365,200,1392,IHANK VOU. PLEASE CONE AOAIN
 122,1407,682,1365,685,1397,125,1440,KEEG THE INVOICE FAR SPALICEBLE RETURNS
 </pre>
+
+Enlarged lower section:
+
+![X51005268408.jpg](img/X51005268408_part_2.png)
+
