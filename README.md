@@ -1,5 +1,7 @@
 # ICDAR 2019 Robust Reading Challenge on Scanned Receipts Optical Character Recognition and Information Extraction
 
+Shvets Sergey
+
 The ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality. 
 
 This attempt was undertaken during a five-day hackathon in January 2023 as part of the master's degree program at Ural Federal University. 
@@ -55,11 +57,11 @@ Mean Levenstein ratio on Task 1,2: **0.9337**
 
 Mean Levenstein ratio on Task 3:   **0.9177**
 
-For the text localization task, I calculated the [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) (IoU) index and obtained an average result of **0.8274**. Upon further examination of the index calculation, I noticed that all of the ground truth bounding boxes were rectangles without any slope. However, PaddleOCR produces rectangles with slope when the image is rotated. As shown in the example of the rotated image X51005268408.jpg from the test dataset, the red boxes represent predictions and the green boxes represent the ground truths. 
+For the text localization task, I calculated the [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) (IoU) and obtained an average result of **0.8274**. Upon further examination of the index calculation, I noticed that all of the ground truth bounding boxes were rectangles without any slope. However, PaddleOCR produces rectangles with slope when the image is rotated. As shown in the example of the rotated image X51005268408.jpg from the test dataset, the red boxes represent predictions and the green boxes represent the ground truths. 
 
 ![X51005268408.jpg](img/X51005268408_part.png)
 
-The IoU ratio uses only two vertices (upper left and lower right).
+The IoU ratio uses only two vertices (upper left and lower right)
 
 ```
 pred_box_df = pd.DataFrame(data=lines, columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4', 'text'])
@@ -74,29 +76,30 @@ pred_box_df = pred_box_df.drop(columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4'
 ap, mean_iou, mean_ratio = calculate_AP(gt_box_df, pred_box_df, iou_thr, lratio_thr)
 ```
 
-Tail from ground truth `X51005268408.txt` file:
+Tail from ground truth `X51005268408.txt` file looks as following:
 
 <pre>
+...
 196,<b>1335</b>,600,<b>1335</b>,600,<b>1390</b>,196,<b>1390</b>,THANK YOU. PLEASE COME AGAIN
 <b>123</b>,1375,<b>683</b>,1375,<b>683</b>,1441,<b>123</b>,1441,KEEP THE INVOICE FOR APPLICABLE RETURNS
 </pre>
 
 It can be noticed that the X and Y values repeat each other, resulting in a zero slope of the rectangle.
 
-On the other hand PaddleOCR yields angled rectangles with different eight coordinates. And it gains with very good OCR results. That's why I did not rely on IoU ratio too much
+In contrast, PaddleOCR yields angled rectangles with different eight coordinates, leading to very good OCR results. Therefore, we did not rely too much on the IoU ratio.
 
 <pre>
 198,1358,597,1331,599,1365,200,1392,IHANK VOU. PLEASE CONE AOAIN
 122,1407,682,1365,685,1397,125,1440,KEEG THE INVOICE FAR SPALICEBLE RETURNS
 </pre>
 
-Enlarged lower section of `X51005268408.jpg`:
+Enlarged lower section of `X51005268408.jpg` file:
 
 ![X51005268408.jpg](img/X51005268408_part_2.png)
 
 ## Demos
 
-I've included demo blocks on each task. You can provide url link for any receipt (with english letters and numbers) and try it!
+I have included demo blocks for each task in the source file. You can provide a URL link for any receipt (with English letters and numbers) and try it.
 
 ### Task 1 - Scanned Receipt Text Localisation
 
@@ -158,4 +161,4 @@ I've included demo blocks on each task. You can provide url link for any receipt
 }
 ```
 
-Feel free to modify/improve this code available for Google Colab/Jupiter notebook with GPU support [here](./ICDAR_2019_SROIE.ipynb)
+Feel free to modify/improve this code, which is available for Google Colab/Jupyter Notebook with GPU support [here](./ICDAR_2019_SROIE.ipynb).
