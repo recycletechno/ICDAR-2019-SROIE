@@ -76,7 +76,7 @@ pred_box_df = pred_box_df.drop(columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4'
 ap, mean_iou, mean_ratio = calculate_AP(gt_box_df, pred_box_df, iou_thr, lratio_thr)
 ```
 
-Tail from ground truth `X51005268408.txt` file looks as following:
+The ground truth file `X51005268408.txt` looks as follows:
 
 <pre>
 ...
