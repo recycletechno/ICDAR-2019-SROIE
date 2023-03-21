@@ -1,6 +1,8 @@
 # ICDAR 2019 Robust Reading Challenge on Scanned Receipts Optical Character Recognition and Information Extraction
 
-The ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality.
+The ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality. 
+
+This attempt was undertaken during a five-day hackathon in January 2023 as part of the master's degree program at Ural Federal University. 
 
 ## Competition tasks
 
@@ -35,7 +37,7 @@ The aim of **Task 3** is to extract texts of a number of key fields from given r
 
 ## Methods and Models
 
-This attempt was undertaken during a five-day hackathon in January 2023 as part of the master's degree program at Ural Federal University. The main goal was to build a baseline code in a short time and achieve satisfactory results. Firstly, we developed a CPU version of the code, then optimized it to work on a GPU, resulting in a significant increase in speed. Further plans include applying methods for improving final metrics using transfer learning, NLTK, etc.
+The main goal was to build a baseline code in a short time and achieve satisfactory results. Firstly, we developed a CPU version of the code, then optimized it to work on a GPU, resulting in a significant increase in speed. Further plans include applying methods for improving final metrics using transfer learning, NLTK, etc.
 
 ### Task 1, 2: PaddleOCR
 
