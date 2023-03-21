@@ -26,7 +26,7 @@ x1_3,y1_3,x2_3,y2_3,x3_3,y3_3,x4_3,y4_3,transcript_3
 …
 x1_N,y1_N,x2_N,y2_N,x3_N,y3_N,x4_N,y4_N,transcript_N
 ```
-The aim of **Task 3** is to extract texts of a number of key fields from given receipts, and save the texts for each receipt image in a JSON file. Each image in the dataset should be also annotated and stored with a text file with the following format:
+The aim of **task 3** is to extract texts of a number of key fields from given receipts, and save the texts for each receipt image in a JSON file. Each image in the dataset should be also annotated and stored with a text file with the following format:
 
 ```json
 {
@@ -101,11 +101,11 @@ Enlarged lower section of `X51005268408.jpg` file:
 
 I have included demo blocks for each task in the source file. You can provide a URL link for any receipt (with English letters and numbers) and try it.
 
-### Task 1 - Scanned Receipt Text Localisation
+### Task 1: Scanned Receipt Text Localisation
 
 ![Task 1](img/random_receipt_2.png)
 
-### Task 2 - Scanned Receipt OCR
+### Task 2: Scanned Receipt OCR
 
 ```
 ['104', '75', '219', '75', '219', '88', '104', '88'] WWW.DRIPS.COM.SG
@@ -150,7 +150,7 @@ I have included demo blocks for each task in the source file. You can provide a 
 ['115', '438', '210', '439', '210', '449', '114', '449'] SEE VOU SOON
 ```
 
-### Task 3 - Key Information Extraction from Scanned Receipts
+### Task 3: Key Information Extraction
 
 ```json
 {
