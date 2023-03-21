@@ -93,7 +93,7 @@ In contrast, PaddleOCR yields angled rectangles with different eight coordinates
 122,1407,682,1365,685,1397,125,1440,KEEG THE INVOICE FAR SPALICEBLE RETURNS
 </pre>
 
-Enlarged lower section of `X51005268408.jpg` file:
+The enlarged fragment of the file `X51005268408.jpg` is presented below.
 
 ![X51005268408.jpg](img/X51005268408_part_2.png)
 
