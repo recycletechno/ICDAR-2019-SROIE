@@ -14,7 +14,7 @@ SROIE represents the processeses of recognizing text from scanned receipts, extr
 
 The competition consisted of three tasks:
 - Scanned receipt text localisation;
-- Scanned receipt OCR;
+- Scanned receipt optical character recognition;
 - Key information extraction from scanned receipts.
 
 For **tasks 1 and 2**, each image in the dataset was required to be annotated with text bounding boxes (bbox) and the transcript of each text bbox. The locations were annotated as rectangles with four vertices, which were in clockwise order starting from the top. The annotations for an image were stored in a text file with the same file name. The file format was as following:
