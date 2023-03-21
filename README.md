@@ -22,7 +22,7 @@ x1_3,y1_3,x2_3,y2_3,x3_3,y3_3,x4_3,y4_3,transcript_3
 …
 x1_N,y1_N,x2_N,y2_N,x3_N,y3_N,x4_N,y4_N,transcript_N
 ```
-The aim of **Task 3** is to extract texts of a number of key fields from given receipts, and save the texts for each receipt image in a json file. Each image in the dataset should be also annotated and stored with a text file with following format:
+The aim of **Task 3** is to extract texts of a number of key fields from given receipts, and save the texts for each receipt image in a JSON file. Each image in the dataset should be also annotated and stored with a text file with the following format:
 
 ```json
 {
