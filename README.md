@@ -55,11 +55,11 @@ Mean Levenstein ratio on Task 1,2: **0.9337**
 
 Mean Levenstein ratio on Task 3:   **0.9177**
 
-I also calculated [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) for text localization task but got avarage results - **0.8274**. When I went into details of index calculation I realized that all the ground truths bounding boxes were rectangles without any slope. But PaddleOCR produce rectangles with slope when image is rotated. Above is an example of rotated image `X51005268408.jpg` from test dataset
+For the text localization task, I calculated the [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) (IoU) index and obtained an average result of **0.8274**. Upon further examination of the index calculation, I noticed that all of the ground truth bounding boxes were rectangles without any slope. However, PaddleOCR produces rectangles with slope when the image is rotated. As shown in the example of the rotated image X51005268408.jpg from the test dataset, the red boxes represent predictions and the green boxes represent the ground truths. 
 
 ![X51005268408.jpg](img/X51005268408_part.png)
 
-Red boxes are predictions and green boxes are the ground truths. IoU ratio is using only 2 vertices (upper left and lower right):
+The IoU ratio uses only two vertices (upper left and lower right).
 
 ```
 pred_box_df = pd.DataFrame(data=lines, columns=['x1', 'y1', 'x2', 'y2', 'x3', 'y3', 'x4', 'y4', 'text'])
@@ -81,7 +81,7 @@ Tail from ground truth `X51005268408.txt` file:
 <b>123</b>,1375,<b>683</b>,1375,<b>683</b>,1441,<b>123</b>,1441,KEEP THE INVOICE FOR APPLICABLE RETURNS
 </pre>
 
-One can observe that Xs and Ys repeat each other, which leads to zero slope of rectangle
+It can be noticed that the X and Y values repeat each other, resulting in a zero slope of the rectangle.
 
 On the other hand PaddleOCR yields angled rectangles with different eight coordinates. And it gains with very good OCR results. That's why I did not rely on IoU ratio too much
 
