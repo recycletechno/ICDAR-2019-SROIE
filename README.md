@@ -1,17 +1,17 @@
-# ICDAR-2019-SROIE
+# ICDAR 2019 Robust Reading Challenge on Scanned Receipts Optical Character Recognition and Information Extraction
+
+The ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality.
 
 ## Competition tasks
 
-A take in ICDAR2019 Competition on Scanned Receipt OCR and Information Extraction (SROIE)
-
 Link to original competition - [https://arxiv.org/pdf/2103.10213.pdf](https://arxiv.org/pdf/2103.10213.pdf)
 
-Scanned receipts OCR and key information extraction (SROIE) represent the processeses of recognizing text from scanned receipts and extracting key texts from them and save the extracted tests to structured documents
+SROIE represents the processeses of recognizing text from scanned receipts, extracting key texts from them and saving the extracted texts to structured documents.
 
 Competition consists of 3 tasks:
-- Scanned Receipt Text Localisation
-- Scanned Receipt OCR
-- Key Information Extraction from Scanned Receipts
+- Scanned receipt text localisation;
+- Scanned receipt OCR;
+- Key information extraction from scanned receipts.
 
 For **Task 1, 2** each image in the dataset should be annotated with text bounding boxes (bbox) and the transcript of each text bbox. Locations are annotated as rectangles with four vertices, which are in clockwise order starting from the top. Annotations for an image are stored in a text file with the same file name. File format:
 
