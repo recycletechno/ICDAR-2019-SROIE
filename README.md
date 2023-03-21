@@ -1,8 +1,8 @@
-# ICDAR 2019 Robust Reading Challenge on Scanned Receipts Optical Character Recognition and Information Extraction
+# Robust Reading Challenge on Scanned Receipts Optical Character Recognition and Information Extraction
 
 Shvets Sergey
 
-The ICDAR 2019 Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality. 
+The Robust Reading Challenge on Scanned Receipts OCR and Information Extraction (SROIE) is a competition that was held as part of the 15th International Conference on Document Analysis and Recognition (ICDAR) in September 2019. The challenge aimed to encourage research on optical character recognition (OCR) and information extraction from scanned receipts, which are often challenging due to the variability in text layout, font, and quality. 
 
 This attempt was undertaken during a five-day hackathon in January 2023 as part of the master's degree program at Ural Federal University. 
 
