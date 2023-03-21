@@ -47,7 +47,7 @@ For Tasks 1 and 2, we utilized an out-of-the-box solution with [PaddleOCR](https
 
 ### Task 3: DonutProcessor
 
-The Donut model was proposed in [OCR-free Document Understanding Transformer](https://arxiv.org/abs/2111.15664). Donut consists of an image transformer encoder and an autoregressive text Transformer decoder to perform document understanding tasks such as document image classification, form understanding, and visual question answering. An overview and code examples of the Donut model as a HuggingFace transformer are available [here](https://huggingface.co/docs/transformers/main/en/model_doc/donut).
+The Donut model was proposed in [OCR-free Document Understanding Transformer](https://arxiv.org/abs/2111.15664). Donut consists of an image transformer encoder and an autoregressive text transformer decoder to perform document understanding tasks such as document image classification, form understanding, and visual question answering. An overview and code examples of the Donut model as a HuggingFace transformer are available [here](https://huggingface.co/docs/transformers/main/en/model_doc/donut).
 
 A pretrained model [unstructuredio/donut-base-sroie](https://huggingface.co/unstructuredio/donut-base-sroie) was taken as a backbone
 
@@ -57,7 +57,7 @@ Mean Levenstein ratio on Task 1,2: **0.9337**
 
 Mean Levenstein ratio on Task 3:   **0.9177**
 
-For the text localization task, I calculated the [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) (IoU) and obtained an average result of **0.8274**. Upon further examination of the index calculation, I noticed that all of the ground truth bounding boxes were rectangles without any slope. However, PaddleOCR produces rectangles with slope when the image is rotated. As shown in the example of the rotated image X51005268408.jpg from the test dataset, the red boxes represent predictions and the green boxes represent the ground truths. 
+For the text localization task, we calculated the [Intersection over Union index](https://en.wikipedia.org/wiki/Jaccard_index) (IoU) and obtained an average result of **0.8274**. Upon further examination of the index calculation, we noticed that all of the ground truth bounding boxes were rectangles without any slope. However, PaddleOCR produces rectangles with slope when the image is rotated. As shown in the example of the rotated image X51005268408.jpg from the test dataset, the red boxes represent predictions and the green boxes represent the ground truths. 
 
 ![X51005268408.jpg](img/X51005268408_part.png)
 
