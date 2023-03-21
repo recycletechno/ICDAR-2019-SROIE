@@ -35,11 +35,11 @@ The aim of **Task 3** is to extract texts of a number of key fields from given r
 
 ## Methods and Models
 
-This attempt was undertaken during 5 days Hackaton in Jan 2023 on master's degree program from Ural Federal University. Main goal was to build a baseline code in a short time and get satisfactory results. First I made CPU version of code, then made this work on GPU therefore speed increased significantly. Further plans: apply methods for improving final metrics with transfer learning, nltk etc.
+This attempt was undertaken during a five-day hackathon in January 2023 as part of the master's degree program at Ural Federal University. The main goal was to build a baseline code in a short time and achieve satisfactory results. Firstly, we developed a CPU version of the code, then optimized it to work on a GPU, resulting in a significant increase in speed. Further plans include applying methods for improving final metrics using transfer learning, NLTK, etc.
 
 ### Task 1, 2: PaddleOCR
 
-I used out of the box solution with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) and got good results to start. Best results were on **en_PP-OCRv3_rec** as a recognition model and **en_PP-OCRv3_det** as a detection model. Did not use angle classifier as no text is rotated by 180 degrees, used cls=False to get better performance
+For Tasks 1 and 2, we utilized an out-of-the-box solution with [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) and achieved good results to begin with. The best results were obtained using `en_PP-OCRv3_rec` as the recognition model and `en_PP-OCRv3_det` as the detection model. We did not use the angle classifier, as no text was rotated by 180 degrees, and used cls=False to improve performance.
 
 ### Task 3: DonutProcessor
 
