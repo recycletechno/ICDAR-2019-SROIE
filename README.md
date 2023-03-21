@@ -43,7 +43,7 @@ For Tasks 1 and 2, we utilized an out-of-the-box solution with [PaddleOCR](https
 
 ### Task 3: DonutProcessor
 
-The Donut model was proposed in [OCR-free Document Understanding Transformer](https://arxiv.org/abs/2111.15664). Donut consists of an image Transformer encoder and an autoregressive text Transformer decoder to perform document understanding tasks such as document image classification, form understanding and visual question answering. Overview, code examples as a huggingface transformer available [here](https://huggingface.co/docs/transformers/main/en/model_doc/donut)
+The Donut model was proposed in [OCR-free Document Understanding Transformer](https://arxiv.org/abs/2111.15664). Donut consists of an image transformer encoder and an autoregressive text Transformer decoder to perform document understanding tasks such as document image classification, form understanding, and visual question answering. An overview and code examples of the Donut model as a HuggingFace transformer are available [here](https://huggingface.co/docs/transformers/main/en/model_doc/donut).
 
 A pretrained model [unstructuredio/donut-base-sroie](https://huggingface.co/unstructuredio/donut-base-sroie) was taken as a backbone
 
